@@ -1,0 +1,297 @@
+/**HOMEPAGE**/
+
+a{color:#334d70;}
+a:hover{color:#222;}
+
+*{font-family:'Robot',sans-serif;}
+   
+.container{max-width:1280px;}
+
+/* Navigation */
+.nav-dark{position:fixed;width:100%;background-color:#1e3148;z-index:99;}
+.nav-head a{font-size:21px;color:white;}
+.nav a{color:white;}
+.nav-container{margin:0 auto;max-width:1280px;padding:0 20px;}
+.nav-dark .icon{background-color:#284363;}
+.nav-dark .icon:hover{background-color:#496a92;}
+.body-pad{padding-top:55px;background-color:#eaeef3;}
+@media only screen and (min-width:300px){
+	.nav-container{padding:0;}
+	.nav-container ul li a{background-color:#324f71;}
+}
+@media only screen and (min-width:550px){
+	.nav-container{padding:0 20px;}
+	.nav-container ul li a{background-color:#1e3148;}
+
+}
+
+
+/* Typeography */
+h1{font-family:'Montserrat',Helvetica,Arial,sans-serif;color:#334d70;font-weight:700;text-transform:uppercase;font-size:3em;letter-spacing:1px;}
+h2{font-size:2.3em;margin:10px 0 20px;font-family:'Montserrat',Helvetica,Arial,sans-serif;color:#39577e;}
+p{font-family: 'Roboto', sans-serif;color:#666;font-size:1em;padding:0 0 20px;line-height:30px;}
+
+
+.segment{padding:60px 0 60px 0;}
+.segment-small{padding:30px 0 30px 0;}
+.segment-big{padding:90px 0 30px 0;}
+
+@media only screen and (min-width:300px){
+	.segment-big{padding:60px 0 60px 0;}
+	.segment{padding:40px 0 40px 0;}
+}
+@media only screen and (min-width:768px){
+	.segment{padding:60px 0 60px 0;}
+	.segment-small{padding:30px 0 30px 0;}
+	.segment-big{padding:90px 0 20px 0;}
+}
+/* Homepage Header content */
+.massive{float:left;}
+.massive h1{font-size:5em;line-height:50px;color:#334d70;padding:40px 40px;margin:70px 0;}
+.massive h2{text-transform:uppercase;clear:both;font-size:1.9em;padding:0;line-height:50px;margin:0;background-color:#d76713;color:#fff;padding-left:20px;width:100%;}
+.massive p{max-width:900px;margin:0 auto;}
+.massive img{margin:40px 0 0;}
+.profile-img{margin-top:200px;}
+
+#subhead .slides{height:50px;font-size:1.1em;text-align:right;}
+#subhead .slides h2{color:#fff;margin:0;}
+
+@media only screen and (min-width:300px){
+	.massive{margin:0;padding:10px 0;}
+	.massive h1{font-size:2.5em;padding:10px 10px;line-height:40px;}
+	.massive h2{font-size:1.4em;line-height:30px;padding:10px;}
+	h2{font-size:1.7em; line-height:35px;}
+	#subhead .slides{height:50px;}
+	#subhead .slides h2{color:#fff;margin:0;font-size:1.3em;}
+}
+@media only screen and (min-width:768px){
+	.massive{}
+	.massive h1{font-size:3.9em;line-height:50px;padding:20px 20px;line-height:40px;}
+	.massive h2{font-size:1.9em;line-height:50px;margin:0;padding:0 10px;}
+	h2{font-size:2.1em;}
+	#subhead .slides{height:50px;}
+	#subhead .slides h2{color:#fff;margin:0;font-size:1.7em;}
+	
+}
+
+
+
+.banner-img{
+	background-image:url('../img/hero.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	height:340px;
+}
+
+/* Page heading */
+.page-title{color:#fff;}
+
+/*About */
+.about{}
+.about h2{}
+.about p{font-size:1.1em;}
+.about .img-circle{border-radius:50%;max-width:150px;display:block;margin:0 auto;}
+@media only screen and (min-width:300px){
+	.about .img-circle{max-width:200px;}
+}
+@media only screen and (min-width:768px){
+	.about .img-circle{max-width:300px;}	
+}
+@media only screen and (min-width:1280px){
+	.about .img-circle{max-width:270px;}	
+}
+.profile .img-circle{border-radius:50%;max-width:200px;margin:15px auto;display:block;}
+
+
+/* Contact form */
+.messages{list-style-type:none;}
+.messages li{text-align:center;}
+.email-form input{background-color:#fff;}
+.email-form textarea{background-color:#fff;margin-top:10px;}
+.button{background-color:#fff;border:#8aaad9 1px solid;border-radius:25px;color:#334d70;font-size:1.2em;padding:10px 30px;}
+.button:hover{background-color:#8aaad9;color:#fff;}
+.captcha-box{width:50%;float:left;}
+/* projects */
+.project{background-color:white;}
+.project img{border:solid 1px #ddd;}
+.project h3{color:#d76713;font-size:1.2em;}
+.project p{font-size:.9em;padding:0 15px 25px;line-height:20px;}
+.project a{text-decoration:none;}
+.project a .mid-icon{color:#fff;}
+.project .button{width:160px;text-align:left;border-radius:0;display:block;margin:0 auto;}
+.mid-icon{font-size:1.2em;margin:6px;}
+
+@media screen and (min-width:300px){
+	.projects .project{margin-bottom:15px;}
+}
+
+
+
+/* Testimonials */
+.testimonial{height:330px;}
+.testimonial-logo{width:150px;}
+.testimonial blockquote{color:#444;font-style:italic;text-align:center;}
+
+@media only screen and (min-width:300px){
+	.testimonial{height:370px;}
+	.testimonial-logo{display:block;max-width:130px;margin:10px auto;}
+	.testimonial blockquote{padding-top:10px;}
+}
+@media only screen and (min-width:768px){
+	.testimonial{height:250px;}
+	.testimonial-logo{margin:20px auto;width:170px;}
+}
+
+/* alignment */
+.align-left{text-align:left;}
+a.align-right{float:right;margin:5px;}
+a.align-right::after{clear:both;}
+.align-right img{float:right;}
+.align-right img::after{clear:right;}
+
+/* backgrounds */
+.blue-back{background-color:#8aaad9;color:white;}
+.blue-back h2{color:white;}
+.blue-back p{color:white;}
+.grey-back{background-color:#dbe4f1;}
+.light-grey-back{background-color:#eaeef3;}
+.black-back{background-color:#111;color:#bbb;}
+.white-back{background-color:#fff;}
+
+/* skills */
+.skillset{padding:10px 10px;}
+.skillset li{list-style-type:none;line-height:23px;color:#666;display:inline;}
+.skillset h5{color:#344d70;}
+.skillset ul::after{display:block;clear:both;content:'';}
+.line{height:6px;background-color:#8aaad9;margin:80px 0;}
+.spot{margin:-7px auto;display:block;width:20px;height:20px;background-color:#8aaad9;border:solid 5px #fff;border-radius:50%;}
+.no-spot{border:none;background-color:transparent;}
+.lrg-icon{font-size:70px; padding:20%;color:#8aaad9;}
+.circle{border:10px solid #8aaad9;border-radius:50%;margin:0 auto;width:140px;height:140px;}
+.inline{position:relative;top:-70px;left:5px;background-color:#fff;margin-bottom:-70px;}
+.no-line{background-color:white;}
+.end-spot{position:relative;left:47px;}
+.top-row{margin:0;}
+.bottom-row{margin:40px 0 0;}
+
+
+@media only screen and (min-width:300px){
+	.skillset ul{text-align:center;}
+	.skillset{padding:20px 15px;margin:0 auto;}
+	.skillset h5{text-align:center;}
+	.skillset .last{padding-bottom:0;}
+	.bottom-row{margin:0;padding-top:0;}
+}
+@media only screen and (min-width:768px){
+	.skillset ul{text-align:left;}
+	.skillset h5{text-align:left;}
+	.bottom-row{padding-top:30px;margin-top:40px;}
+	.skillset{margin:0;width:100%;}
+}
+
+
+/* Footer */
+.footer .align-right{text-align:right;}
+.footer h4{color:#ddd;}
+.footer .last{border-top:1px solid #444;padding:20px 0 0;margin-bottom:0;}
+.footer .last p{padding:0;}
+.footer .fa{font-size:2em;padding:10px 10px 0 0;}
+.footer p{color:#bbb;}
+.footer ul {list-style-type:none;}
+.footer a{color:#bbb;}
+.footer a:hover{color:#8aaad9;}
+
+@media only screen and (min-width:300px){
+	.footer{text-align:center;}
+}
+@media only screen and (min-width:768px){
+	.footer{text-align:left;}
+}
+/* Anchor */
+.anchor{display:block;position:relative;top:-90px;visibility:hidden;}
+@media only screen and (min-width:300px){
+	.anchor#about{top:-190px;}
+}
+@media only screen and (min-width:768px){
+	.anchor{top:-90px;}
+}
+
+/**END HOMEPAGE**/
+
+/** Ronin Game **/
+#game{overflow:hidden;height:500px;}
+#game canvas{position:relative;top:-250px;}
+
+.table th{background-color:#1e3148;}
+.table-striped tr:nth-child(odd){background-color:#dbe4f1;}
+
+
+/** BLOG PAGE **/
+.full-height{min-height:600px;}
+
+.blog-post-title{line-height:1.2em;text-transform:capitalize;margin-bottom:15px;}
+.blog-post-date{display:block;padding-bottom:1px;color:#888;}
+.tag-list{list-style-type:none;margin-top:5px;border-bottom:1px #ddd solid;padding-bottom:10px;}
+.tag-list li{border-top-right-radius:7px;float:left;margin-right:5px;color:#fff;background-color:#8aaad9;line-height:15px;padding:4px;}
+.tag-list li a{line-height:15px;color:#fff;text-decoration:none;}
+.tag-list::after{display:block;clear:both;content:'';}
+.post-content{clear:both;padding-top:40px;}
+.post-content img{margin:0 auto;display:block;padding:5px 10px;}
+
+.cat-nav{list-style-type:none;}
+
+
+/** Pretty print code styles **/
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+
+pre{background-color:#3b4552;color:#2fdc4a;padding:10px;margin:10px auto;width:95%;}
+
+pre .str, code .str { color: #65B042; } /* string  - green */
+pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #89bdff; } /* type - light blue */
+pre .lit, code .lit { color: #3387CC; } /* literal - blue */
+pre .pun, code .pun { color: #fff; } /* punctuation - white */
+pre .pln, code .pln { color: #fff; } /* plaintext - white */
+pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+	background-color: #333;
+	border-radius: 3px;
+}
+
+pre.prettyprint {
+	letter-spacing:1px;
+	width: 95%;
+	margin: 10px auto;
+	padding: 20px;
+	white-space: pre-wrap;
+	word-spacing:4px;
+	font-size:15px;
+	line-height:1px;
+}
+
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type:decimal-leading-zero;}
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 {background-color:#222;}
+
+@media print {
+  pre .str, code .str { color: #060; }
+  pre .kwd, code .kwd { color: #006; font-weight: bold; }
+  pre .com, code .com { color: #600; font-style: italic; }
+  pre .typ, code .typ { color: #404; font-weight: bold; }
+  pre .lit, code .lit { color: #044; }
+  pre .pun, code .pun { color: #440; }
+  pre .pln, code .pln { color: #000; }
+  pre .tag, code .tag { color: #006; font-weight: bold; }
+  pre .atn, code .atn { color: #404; }
+  pre .atv, code .atv { color: #060; }
+}

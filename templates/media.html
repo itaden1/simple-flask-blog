@@ -1,0 +1,31 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+<h2>media manager</h2>
+<div class="col-m-9">
+	<div class="panel white-back">
+		<div class="scroll scroll-lrg">
+			{% if media|length > 0 %}
+			<ul class="media-list">
+				{% for m in media %}
+				<li class="image-thumb">
+					<div class="img-thum-inner">
+						<img src="static/uploads/img/{{m}}">
+					</div>
+					<a href ="/delete-media{{m}}">Delete</a>
+				</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+		</div>
+	</div>
+</div>
+<div class="col-m-3">
+	<div class="panel white-back">
+		<form action="upload-media" method="post" enctype="multipart/form-data">
+			<div class="upload_box" id="output-list"></div>
+			<input id="files" type = "file" name = "files[]" multiple><br>
+			<input class = "button btn-small" type = "submit" name = "submit" value = "Upload">
+		</form>
+	</div>
+</div>
+{% endblock %}

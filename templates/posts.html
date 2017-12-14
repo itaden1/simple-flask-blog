@@ -1,0 +1,25 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+<div class = "row">
+<div class = "col-xs-12 col-m-6">
+<h2>Posts</h2>
+{% if posts %}
+{% for post in posts %}
+<h4>{{ post[1] }}</h4>
+<a href = "/edit-post{{post[0]}}">Edit post</a>
+<a href = "/delete-post{{post[0]}}">Delete post</a>
+{% endfor %}
+{% endif %}
+</div>
+<div class = "col-xs-12 col-m-6">
+	<h2>Drafts</h2>
+	{% if drafts %}
+	{% for draft in drafts %}
+	<h4>{{draft[1]}}</h4>
+	<a href = "/edit-post{{draft[0]}}">Edit post</a>
+	<a href = "/delete-post{{draft[0]}}">Delete post</a>
+	{% endfor %}
+	{% endif %}
+</div>
+</div>
+{% endblock %}

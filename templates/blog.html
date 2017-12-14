@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block page_title %}
+<h1>{{title}}</h1>
+{% endblock %}
+{% block content %}
+<div class = "col-m-9">
+	<div class = "panel white-back full-height">
+		{% if search_tag %}
+		<h2>Posts Filed Under {{ search_tag[0][1] }}</h2>
+		{% else %}
+		<h2>Latest Posts</h2>
+		{% endif %}
+		{% if posts %}
+			{% for post in posts %}
+				<a href = "view-post{{post[0]}}">
+					<h3>{{post[1]}}</h3>
+					<p>{{post[2]}}</p>
+				</a>
+			{% endfor %}
+		{% endif %}
+	</div>
+</div>
+<div class = "col-m-3 col-last">
+	<div class = "panel light-grey-back">
+		<h4>Blog Categories</h4>
+		<ul class="cat-nav">
+			<li><a href="/blog-index">Blog Index</a></li>
+			{% if cats %}
+			{% for cat in cats %}
+			<li><a href = "/posts-by-tag{{cat[0]}}" >{{cat[1]}}</a></li>
+			{% endfor %}
+		{% endif %}
+		</ul>
+	</div>
+	<div class = "panel white-back profile">
+		<img class="img-circle" src="static/img/person_placeholder.png" alt="Profile Picture">
+		<p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+	</div>
+</div>
+{% endblock %}

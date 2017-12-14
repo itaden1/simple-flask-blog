@@ -1,0 +1,11 @@
+.setup{;width:300px;text-align:center;padding:20px;margin:100px auto 30px;;background-color:#ddd;border-radius:5px;box-shadow:1px 1px 8px #555;}
+.setup input{margin:5px;}
+.credits{width:300px;margin:0 auto;text-align:center;}
+input[type="text"]{background-color:white;}
+input[type="email"]{background-color:white;}
+input[type="password"]{background-color:white;}
+input[type="submit"]{background-color:#345731;padding:8px 20px;border-radius:4px;color:#fff;box-shadow:1px 1px 1px #555;}
+input[type="submit"]:hover{background-color:#2e422c;cursor:pointer;}
+
+.error{color:red;}
+.message{color:green;}

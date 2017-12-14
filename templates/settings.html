@@ -1,0 +1,51 @@
+{% extends "dashboard.html" %}
+{% block content %}
+<div class = "row">
+	<div class = "col-xs-12">
+		<h2>Settings</h2>
+	</div>
+</div>
+<div class = "row">
+	<div class = " col-xs-12 col-m-6 col-l-6">
+		<div class = "panel">
+			<h3>Update details</h3>
+			<p>It is strongly advised to reset your password and add an email before continuing, your email will be used for all future log ins and to reset your password if you forget it</p>
+			{% if error %}
+			<p class = "error"><strong>{{error}}</strong>
+			{% endif %}
+			{% if message %}
+			<p class = "message"><strong>{{message}}</strong>
+			{% endif %}
+			<form action="change-password" method="post">
+				<input type="email" name="email" placeholder="Enter email" required>
+				<input type="password" name="new-password" placeholder="new password" required>
+				<input type ="password" name="confirm-password" placeholder = "Re-enter password" required>
+				<input class = "button btn-small" type="submit" value="Update Account">
+			</form>
+		</div>
+	</div>
+	<div class = "col-xs-12 col-m-6 col-l-6">
+		<div class = "panel">
+			<h3>Add Post Categories</h3>
+			<form action="add-category" method="post">
+				<input type="text" name="category" placeholder="category name" required>
+				<input class = "button btn-small" type="submit" value="Add category">
+			</form>
+			{% if cats %}
+				<ul class="categories">
+					{% for cat in cats %}
+					<li class="category">{{cat[1]}}<a href="/delete-category{{cat[0]}}">X</a></li>
+					{% endfor %}				
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+</div>
+	<div class = "row">
+		<div class = "col-xs-12 col-m-6">
+			<div class = "panel">
+				<a class="button btn-small" href = "manage-db">manage database</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "dashboard.html" %}
+{% block scripts %}
+<script type="text/javascript"src="static/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="static/js/script.js"></script>
+{% endblock %}
+{% block content %}
+
+<div class = "row">
+	<div class = "col-xs-12 col-l-8">
+		<!-- if the post is being edited -->
+		{% if data %}
+		<div class = "panel white-back">
+			<h2>Edit Post</h2>
+			<form action="update-post{{data[0][0]}}" method="post" enctype="multipart/form-data">
+				<input type="text" name="post-title" class = "title-input" id="post-title" value="{{ data[0][1] }}" required>
+				<input type="hidden" name="id" value="{{ data[0][0] }}">
+				<!-- tag selector -->
+				<h4>Category Tags</h4>
+				{% for tag in cat_tags %}
+				<input type="checkbox" id="tag" name="tag" value="{{tag[0]}}" {% for t in ticked_tags %}{% if tag[0] == t[1] %} checked {% endif %}{% endfor %}>
+				<label for="tag">{{tag[1]}}</label>
+				{% endfor %}
+				<textarea name="post-content" id="post-content" rows="10" cols="80" required>{{ data[0][3] }}</textarea><br>
+				<input type="text" name="author" id="author" value="{{data[0][4]}}" required>
+				{% else %}
+
+				<!-- if the post is new -->
+				<div class = "panel white-back">
+					<h2>New Post</h2>
+					<form action="save-post" method="post" enctype="multipart/form-data">
+						<input type="text" name="post-title" class = "title-input" id="post-title" value="{% if savedData %}{{ savedData[0][1] }}{% else %}{% endif %}" placeholder="Please enter a title" required> 
+						<!-- tag selector -->
+						<h4>Category Tags</h4>
+						{% for tag in cat_tags %}
+						<input type="checkbox" id="tag" name="tag" value="{{tag[0]}}">
+						<label for="tag">{{tag[1]}}</label>
+						{% endfor %}
+						<textarea name="post-content" id="post-content" rows="10" cols="80" required>{% if savedData %}{{ savedData[0][3] }}{% endif %}</textarea><br>
+						<input type="text" name="author" id="author" placeholder="Author" required>
+						{% endif %}
+
+						<div class = "form-right">
+							<input class = "button btn-small" type="submit" name="submit" value="Save Draft">
+							<input class = "button btn-small" type="submit" name ="submit" value="Publish">
+						</div>
+				</div>
+		</div>
+		<script>
+CKEDITOR.replace('post-content',{ height:400});
+		</script>
+		<div class = "col-xs-12 col-l-4">
+
+			{% if message %}
+			{{message}}
+			{% endif %}
+			<!-- end image uploads -->
+					</form>
+					<!-- end form -->
+
+
+					<! -- Media and images -- >
+					<div class = "row">
+						<div class = "col-xs-12 col-last">
+							<div class = "panel white-back">
+						<h2>Image Manager</h2>
+								<div class = "scroll">
+									{% if media %}
+									<ul class="media-list">
+										{% for m in media %}
+										<li class = "image-thumb">
+											<div class = "img-thum-inner">
+												<img class = "img-responsive" src = "static/uploads/img/{{ m }}">
+											</div>
+										</li>
+										{% endfor %}
+									</ul>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+	</div>
+	{% endblock %}

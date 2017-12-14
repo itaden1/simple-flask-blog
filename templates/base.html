@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+		<title>Simple Flask Blog</title>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+
+
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<link rel="stylesheet" type="text/css" href="static/css/grid-blox.css">
+		<link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type = "text/css" href="static/css/style.css">
+		
+		<script type="text/javascript" src="static/js/grid-blox.js"></script>
+		<script type="text/javascript" src="static/js/script.js"></script>
+	</head>
+	<body>
+		<!-- navigation -->
+		<div class = "nav-dark">
+			<div class = "nav-container">
+				<div class = "nav-head">
+					<a class= "icon" id = "icon" href = "javascript:;"><i class = "fa fa-bars" aria-hidden="true"></i></a>
+				</div>
+				<div class = "nav nav-right" id="nav-collapse">
+					<ul>
+						<li><a href = "/">Home</a></li>
+						<li><a href = "/blog-index">Latest</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Navigation -->
+		<!-- padding for static nav -->
+		<div class = "body-pad" id="body-top">
+
+
+			<!-- Header -->
+			<div class = "segment-small banner-img">
+				<div class = "container">
+					<div class = "row">
+						<div class = "col-xs-12 col-s-9 col-m-10 col-l-8">
+							<div class = "massive">
+								<h1>{{ title }}</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Header -->
+			<div class = "segment-small white-back">
+				<div class = "container">
+					<div class="row">
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="messages">
+							{% for message in messages %}
+							<li>{{message}}</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						{% block content %}{% endblock %}
+					</div>
+				</div>	
+			</div>
+
+			<!-- Footer -->
+			<div class = "segment-small black-back">
+				<div class = "container">
+					<div class="footer">
+						<div class = "row">
+							<div class = "col-m-4">
+								<h4>Around the Web</h4>
+								<a href = "#" target = "blank"><i class = "fa fa-github" aria-hidden="true"></i></a>
+								<a href = "#" target = "blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+							</div>
+							<div class = "col-m-4">
+								&nbsp;	
+							</div>
+							<div class = "col-m-4">
+								<h4>Links</h4>
+								<div class = "col-m-4">
+									<ul>
+										<li><a href = "/">Home</a></li>
+										<li><a href = "/blog-index">Latest</a></li>
+									</ul>
+								</div>
+								<div class = "col-m-4">
+								</div>
+								<div class="col-m-4">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+						<div class = "row last">
+							<div class = "col-xs-12 center">
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Footer -->
+		</div>
+	</body>
+</html>

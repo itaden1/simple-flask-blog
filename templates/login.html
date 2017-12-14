@@ -1,0 +1,18 @@
+{% extends "start.html" %}
+{% block form %}
+{% if error %}
+<p class = "error"><strong>{{ error }}</strong></p>
+{% endif %}
+{% if message %}
+<p class = "message"><strong>{{ message }}</strong></p> 
+{% endif %}
+{% if 'username' not in session %}
+<form action="login" method="post">
+	<input type="text" name="username" id="username" placeholder="email" required><br>
+	<input type="password" name="password" id="password" placeholder="password" autocomplete="off" required><br>
+	<input type="submit" value="Log In"><br>
+</form>
+{% endif %}
+<a href = "/">Homepage</a>
+
+{% endblock %}

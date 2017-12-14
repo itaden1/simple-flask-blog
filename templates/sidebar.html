@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block sidebar %}
+	{% if categories %}
+		<ul class = "cat-list">
+		{% for cat in categories %}
+			<li>{{ cat[1] }}</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}

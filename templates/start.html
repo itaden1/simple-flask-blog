@@ -1,0 +1,29 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel = "stylesheet" type = "text/css" href = "static/css/grid-blox.css">
+		<link rel = "stylesheet" type = "text/css" href = "static/css/setup.css">
+	</head>
+	<body>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul class = "flashes">
+				{% for message in messages %}
+					<li>{{message}}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+		<div class = "container">
+			<div class = "setup">
+				<img class = "img-center"src="static/img/logo.png" alt="logo" width="250">
+				{% block form %}{% endblock %}
+			</div>
+			<div class = "credits">
+				<p>Built by<br><a href="https://ethanshearer.com/" target = "blank">Ethan Shearer</a></p>
+			</div>
+		</div>
+	</body>
+</html>

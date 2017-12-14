@@ -1,0 +1,12 @@
+static/uploads/img/*
+!static/uploads/img/download.jpg
+config.cfg
+.git
+*~
+*.swip
+env
+*.db
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class

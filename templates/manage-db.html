@@ -1,0 +1,82 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+<div class = "col-xs-12">
+	<div class = "panel">
+		<h4>Posts</h4>
+		<table class="table table-striped table-bordered db">
+			<tr>
+				<th width="40">id</th>
+				<th>title</th>
+				<th width="80">date</th>
+				<th>content</th>
+				<th>Author</th>
+				<th width="70">Draft</th>
+			</tr>
+			{% for p in posts%}
+			<tr>
+				{% for d in p %}
+				<td>{{d}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+<div class = "col-xs-6 col-m-3">
+	<div class = "panel">
+		<h4>Categories</h4>
+		<table class = "table table-striped table-bordered db">
+			<tr>
+				<th width="40">id</th>
+				<th>tag name</th>
+			</tr>
+			<tr>
+				{% for t in tags %}
+				<tr>
+					{% for d in t %}
+					<td>{{d}}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			</tr>
+		</table>
+	</div>
+</div>
+<div class = "col-xs-6 col-m-3">
+	<div class = "panel">
+		<h4>Post / Category Relationship</h4>
+		<table class = "table table-striped table-bordered db">
+			<tr>
+				<th>post id</th>
+				<th>category id</th>
+			</tr>
+			{% for r in rels %}
+			<tr>
+				{% for d in r %}
+				<td>{{d}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+<div class = "col-xs-6 col-m-3">
+	<div class = "panel">
+		<h4>User Credentials</h4>
+		<table class = "table table-striped table-bordered db">
+			<tr>
+				<th>id</th>
+				<th>user name</th>
+				<th>pass</th>
+			</tr>
+			{% for u in users %}
+			<tr>
+				{% for d in u %}
+				<td>{{d}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}
