@@ -14,7 +14,7 @@ virtualenv my-blog-name-env
 pip install -r requirements.txt
 ```
 
-I have included a basic setup script to initialise the database
+I have included a basic setup script to initialise the database and set a secret key.
 ```
 python3 app_setup.py
 ```
